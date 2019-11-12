@@ -1,0 +1,15 @@
+grid-container, .grid-container {
+  width: calc(100% - 2*var(--spacer-md));
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+grid-container-max, .grid-container-max {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}

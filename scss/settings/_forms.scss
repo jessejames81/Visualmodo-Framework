@@ -1,0 +1,88 @@
+:root{
+  --form-padding-x: var(--spacer-sm);
+  --form-padding-y: var(--spacer-xs);
+  --form-radius: 0.25em;
+}
+
+.form-control {
+  background-color: var(--color-bg);
+  padding: var(--spacer-xs) var(--spacer-sm);
+  border-radius: var(--form-radius);
+  border: 2px solid var(--gray-400);
+
+  &::-webkit-input-placeholder {
+    color: var(--gray-600);
+  }
+
+  &::-moz-placeholder {
+    color: var(--gray-600);
+  }
+
+  &:-moz-placeholder {
+    color: var(--gray-600);
+  }
+
+  &:focus {
+    border-color: var(--primary);
+    box-shadow: 0px 0px 0px 3px alpha(var(--primary), 0.2);
+    outline: none;
+  }
+}
+
+.form-control[disabled], .form-control[readonly] {
+  cursor: not-allowed;
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: var(--error);
+
+  &:focus {
+    box-shadow: 0px 0px 0px 3px alpha(var(--error), 0.2);
+  }
+}
+
+.form-legend {
+  color: var(--gray-900);
+  font-size: var(--font-size-md);
+  line-height: 1.2;
+  margin-bottom: var(--spacer-xxs);
+}
+
+.form-label {
+  font-size: var(--font-size-sm);
+  display: inline-block;
+}
+
+// error message
+.form-error-msg {
+  color: var(--error, hsl(342, 100%, 46%));
+  font-size: var(--font-size-sm, 0.833em);
+  margin-top: var(--spacer-xxs);
+
+  // hide element
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.form-error-msg--is-visible {
+  position: relative;
+  clip: auto;
+}
+
+// radio and checkbox buttons
+.radio-list, .checkbox-list {
+  > * { // parent of input + label
+    position: relative;
+    display: flex;
+    align-items: baseline;
+  }
+
+  label { // radio/checkbox labels
+    line-height: var(--body-line-height);
+  }
+
+  input {
+    margin-right: var(--spacer-xxxs);
+    flex-shrink: 0;
+  }
+}

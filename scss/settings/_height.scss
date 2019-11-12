@@ -1,0 +1,27 @@
+.h-xxxxs { height: calc(0.25 * #{$height-unit}); }
+.h-xxxs  { height: calc(0.5 * #{$height-unit}); }
+.h-xxs   { height: calc(0.75 * #{$height-unit}); }
+.h-xs    { height: calc(1 * #{$height-unit}); }
+.h-sm    { height: calc(1.5 * #{$height-unit}); }
+.h-md    { height: calc(2 * #{$height-unit}); }
+.h-lg    { height: calc(3 * #{$height-unit}); }
+.h-xl    { height: calc(4 * #{$height-unit}); }
+.h-xxl   { height: calc(6 * #{$height-unit}); }
+.h-xxxl  { height: calc(8 * #{$height-unit}); }
+.h-xxxxl { height: calc(16 * #{$height-unit}); }
+.h-auto  { height: auto; }
+.h-fitcontent  { height: fit-content; }
+.h-10    { height: 10%; }
+.h-20    { height: 20%; }
+.h-30    { height: 30%; }
+.h-40    { height: 40%; }
+.h-50    { height: 50%; }
+.h-60    { height: 60%; }
+.h-70    { height: 70%; }
+.h-80    { height: 80%; }
+.h-90    { height: 90%; }
+.h-100   { height: 100%; }
+.h-25    { height: 25%; }
+.h-33    { height: calc(100% / 3); }
+.h-66    { height: calc(100% / 1.5); }
+.h-75    { height: 75%; }

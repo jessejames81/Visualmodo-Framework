@@ -1,0 +1,64 @@
+:root, [data-theme="default"] {
+  // main
+  @include HSLColor(--primary-darker, 256, 100%, 36%);
+  @include HSLColor(--primary-dark, 256, 100%, 46%);
+  @include HSLColor(--primary, 256, 100%, 56%);
+  @include HSLColor(--primary-light, 256, 100%, 66%);
+  @include HSLColor(--primary-lighter, 256, 100%, 76%);
+
+  @include HSLColor(--accent-darker, 342, 100%, 26%);
+  @include HSLColor(--accent-dark, 342, 100%, 36%);
+  @include HSLColor(--accent, 342, 100%, 46%);
+  @include HSLColor(--accent-light, 342, 100%, 56%);
+  @include HSLColor(--accent-lighter, 342, 100%, 66%);
+
+  @include HSLColor(--black, 100, 100%, 0%);
+  @include HSLColor(--white, 0, 0%, 100%);
+
+  // feedback
+  @include HSLColor(--warning-darker, 56, 99%, 26%);
+  @include HSLColor(--warning-dark, 56, 99%, 36%);
+  @include HSLColor(--warning, 56, 99%, 46%);
+  @include HSLColor(--warning-light, 56, 99%, 56%);
+  @include HSLColor(--warning-lighter, 56, 99%, 66%);
+
+  @include HSLColor(--success-darker, 129, 100%, 30%);
+  @include HSLColor(--success-dark, 129, 100%, 40%);
+  @include HSLColor(--success, 129, 100%, 50%);
+  @include HSLColor(--success-light, 129, 100%, 60%);
+  @include HSLColor(--success-lighter, 129, 100%, 70%);
+
+  @include HSLColor(--error-darker, 342, 100%, 26%);
+  @include HSLColor(--error-dark, 342, 100%, 36%);
+  @include HSLColor(--error, 342, 100%, 46%);
+  @include HSLColor(--error-light, 342, 100%, 56%);
+  @include HSLColor(--error-lighter, 342, 100%, 66%);
+
+  // color grays
+  @include HSLColor(--gray-100, 210, 17%, 98%);
+  @include HSLColor(--gray-200, 210, 16%, 93%);
+  @include HSLColor(--gray-300, 210, 14%, 89%);
+  @include HSLColor(--gray-400, 210, 14%, 83%);
+  @include HSLColor(--gray-500, 210, 11%, 71%);
+  @include HSLColor(--gray-600, 208, 7%, 46%);
+  @include HSLColor(--gray-700, 210, 9%, 31%);
+  @include HSLColor(--gray-800, 210, 10%, 23%);
+  @include HSLColor(--gray-900, 210, 11%, 15%);
+
+  --red: #ff1744;
+  --pink:#f50057;
+  --purple: #d500f9;
+  --deep-purple: #651fff;
+  --indigo: #3d5afe;
+  --blue: #2979ff;
+  --light-blue: #00b0ff;
+  --teal: #1de9b6;
+  --green: #00e676;
+  --light-green: #76ff03;
+  --lime: #c6ff00;
+  --yellow: #ffea00;
+  --amber: #ffc400;
+  --orange: #ff9100;
+  --deep-orange: #ff3d00;
+
+}

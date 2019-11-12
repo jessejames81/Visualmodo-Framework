@@ -1,0 +1,37 @@
+{
+  "name": "visualmodo",
+  "version": "1.0.0",
+  "description": "Front-End Framework",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "engines": {
+    "npm": "latest"
+  },
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-zip": "latest",
+    "del": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-ignore": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-rimraf": "latest",
+    "gulp-sass": "latest",
+    "gulp-sequence": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "run-sequence": "latest",
+    "gulp-autoprefixer": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "autoprefixer": "latest",
+    "gulp-babel": "latest",
+    "gulp-postcss": "latest"
+  }
+}

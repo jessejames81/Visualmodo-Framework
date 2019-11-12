@@ -1,0 +1,121 @@
+$grid-columns: 12 !default;
+
+.grid {
+  --grid-gap: 0px;
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex-basis: 100%;
+  }
+}
+
+[class*="grid-gap"] {
+  margin-bottom: calc(-1 * var(--grid-gap, 1em));
+  margin-left: calc(-1 * var(--grid-gap, 1em));
+
+  > * { 
+    margin-bottom: var(--grid-gap, 1em); 
+    margin-left: var(--grid-gap, 1em);
+  }
+}
+
+.grid-gap-xxxxs { --grid-gap: var(--spacer-xxxxs); }
+.grid-gap-xxxs  { --grid-gap: var(--spacer-xxxs); }
+.grid-gap-xxs   { --grid-gap: var(--spacer-xxs); }
+.grid-gap-xs    { --grid-gap: var(--spacer-xs); }
+.grid-gap-sm    { --grid-gap: var(--spacer-sm); }
+.grid-gap-md    { --grid-gap: var(--spacer-md); }
+.grid-gap-lg    { --grid-gap: var(--spacer-lg); }
+.grid-gap-xl    { --grid-gap: var(--spacer-xl); }
+.grid-gap-xxl   { --grid-gap: var(--spacer-xxl); }
+.grid-gap-xxxl  { --grid-gap: var(--spacer-xxxl); }
+.grid-gap-xxxxl { --grid-gap: var(--spacer-xxxxl); }
+
+@function round-width ($i) {
+  //function used to round width to a number with 2 decimal places - used for IE fallback
+  $width : floor(100% * $i * 100/ $grid-columns) / 100;
+  @return $width;
+}
+
+@mixin autoSizedColumn {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.cell { // auto-sized column
+  @include autoSizedColumn;
+}
+
+@for $i from 1 through $grid-columns {
+  .cell-#{$i} {
+    flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+    max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+  }
+}
+
+@include breakpoint(xs) {
+  .cell-xs { // auto-sized column
+    @include autoSizedColumn;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .cell-xs-#{$i} {
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .cell-sm { // auto-sized column
+    @include autoSizedColumn;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .cell-sm-#{$i}  {
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .cell-md { // auto-sized column
+    @include autoSizedColumn;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .cell-md-#{$i} {
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+    }
+  }
+}
+
+@include breakpoint(lg) {
+  .cell-lg { // auto-sized column
+    @include autoSizedColumn;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .cell-lg-#{$i} {
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+    }
+  }
+}
+
+@include breakpoint(xl) {
+  .cell-xl { // auto-sized column
+    @include autoSizedColumn;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .cell-xl-#{$i} {
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+    }
+  }
+}
